@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package helloworld;
+
+option go_package = "github.com/rodixxi/graphql_grpc_rest";
+
+service GreetingService{
+  rpc SayHello (GreetingRequest) returns (GreetingResponse);
+}
+
+message GreetingRequest{
+  string message = 1;
+}
+
+message GreetingResponse{
+  string greeting = 1;
+}
+
